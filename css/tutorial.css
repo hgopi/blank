@@ -1,0 +1,33 @@
+pre {
+	white-space: pre;
+	background: transparent;
+	border: transparent;
+	color: white;
+	line-height: 1em;
+}
+.articles .article blockquote {
+	margin: 0 auto;
+}
+.articles .article blockquote p {
+	font-style: italic;
+	font: "Bookman Old Style";
+}
+.articles .article .html-markup,  .articles .article .css-markup {
+	line-height: 1em;
+	margin: 1em auto;
+	width: 800px;
+	min-height: 150px;
+	background: #272822;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+}
+.articles .article .html-markup p,  .articles .article .css-markup p {
+	color: white;
+	font-size: 1.1em;
+}
+.myButton {
+	background: #000000;
+	border-radius: 10px;
+	width: 50px;
+	box-shadow: 5px 5px 5px #000000;
+}

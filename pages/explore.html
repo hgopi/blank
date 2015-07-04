@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Few Drops from Ocean</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="../images/favicon.png" type="image/png"/>
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/explore.css" rel="stylesheet" type="text/css" media="all" />
+<script src="../js/jquery.min.js"></script>
+<script src="../js/nav.js"></script>
+</head>
+<body>
+<div class="header-fix">
+	<h1 id="home"><span class="header">Just</span><br/>Some Drops</h1>
+	<div class="cotainer">
+		<div class="col-md-9">
+		<span><img class="nav-image" alt="navigation image" src="../images/menu-icon.png"/></span>
+		<ul class="nav-menu">
+			<li id="article"><a href="../index.html">Articles</a></li>
+			<li id="explore"><a href="explore.html">Explore More</a></li>
+			<li id="aboutme"><a href="aboutme.html">About Me</a></li>
+		</ul>
+	</div>
+</div>
+	<div class="clearfix"></div>
+	<div class="explore">
+		<div class="articles">
+			<h2>JavaScript Challenges</h2>
+			<p>Below are some JavaScript challenges that I've done on some online websites.</p>
+				<h3>Finding the First Non-repeating Character in a String</h3>
+				<p>In this problem, we are going to find the first non-repeating character in a given string. For example, in the text &#x201C;Lorem Ipsum&#x201D; the &#x2018;L&#x2019; is the first non-repeating word. So, let's see how to solve this problem in JS.</p>
+				<div class="js-coding">
+				<p><pre>
+<span class="code-blue"><i>function</i></span> <span class="func-color">firstNonRepeatChar</span>(<span class="arg-color"><i>str</i></span>){
+  <span class="code-blue"><i>var</i></span> len <span class="op-color">=</span> str.<span class="code-blue">length</span>,
+      <span class="code-blue"><i>char</i></span>, 
+      charCount <span class="op-color">=</span> {};
+  <span class="op-color">for</span>(<span class="code-blue"><i>var</i></span> i <span class="op-color">=</span> <span class="num-color">0</span>; i <span class="op-color">&lt;</span> len; i<span class="op-color">++</span>){
+    <span class="code-blue"><i>char</i></span> <span class="op-color">=</span> str[i];
+    <span class="op-color">if</span>(charCount[<span class="code-blue"><i>char</i></span>]){
+      charCount[<span class="code-blue"><i>char</i></span>]<span class="op-color">++</span>;
+    }
+    <span class="op-color">else</span>
+      charCount[<span class="code-blue"><i>char</i></span>] <span class="op-color">=</span> <span class="num-color">1</span>;
+  }
+    <span class="op-color">for</span> (<span class="code-blue"><i>var</i></span> j <span class="op-color">in</span> charCount){
+    <span class="op-color">if</span> (charCount[j] <span class="op-color">==</span> <span class="num-color">1</span>)
+       <span class="op-color">return</span> j;
+  }
+}
+
+console.<span class="code-blue">log</span>(firstNonRepeatChar(<span class="arg2-color">"Quick brown fox jumps over the lazy dog"</span>)) <span class="cmd-color">// returns Q</span>
+</pre></p>
+			</div>
+			<p class="heading">Code Explained:</p>
+			<p>Using <kbd>for</kbd> loop go through every word of the string. Check the character if it is presented in the declared object <kbd>charCount</kbd>. If it is <kbd>true</kbd>, then increase the count by <kbd>1</kbd>. Or, initiate the count by <kbd>1</kbd>. Thus we will finally get the char count of all the characters in the given string. But wait, that is not the solution for our problem. So lets check our object again.</p>
+			<p>Create another <kbd>for</kbd> loop, this time it is actually a <kbd>for in</kbd> loop. Then check if the current key value is equal to <kbd>1</kbd> (Remember, we need the <b><i>first</i></b> non-repeating character).  If so, return the key value.
+		</div>
+	</div>
+</body>
+</html>

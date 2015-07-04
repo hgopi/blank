@@ -1,0 +1,46 @@
+.explore .articles div.js-coding {
+	width: 800px;
+	min-height: 150px;
+	margin-left: 12em;
+	margin-bottom: 0.5em;
+	border: 1px solid #FFFFFF;
+	background: #272822;
+	border-radius: 10px;
+}
+pre {
+	display: block;
+	font-family: monospace;
+	white-space: pre;
+	background: transparent;
+	border: transparent;
+	color: #F8F8F2;
+}
+.explore .articles p.heading {
+	font-size: 1.1em;
+	font-weight: 800;
+	color: #CCFFCC;
+}
+.code-blue {
+	color: #66D9EF;
+}
+.func-color {
+	color: #A6E22E;
+}
+.op-color {
+	color: #F92659;
+}
+.arg-color {
+	color: #FD971F;
+}
+.num-color {
+	color: #AE81BC;
+}
+.arg2-color {
+	color: #E6DB74;
+}
+.cmd-color {
+	color: #75715E
+}
+.css-color {
+	color: #AE81DD}
+}
