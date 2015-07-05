@@ -311,8 +311,34 @@ div.preview-panel {
 	margin-top: 1em;
 	margin-left: 8em;
 	margin-bottom: 1em;
-	width: 20%;
-	height: 50px;
+	width: 450px;
+	min-height: 50px;
 	border: 1px solid #66BE91;
 }
+
+/*Memory Game events*/
+div.startup {
+	margin-left: 8.2em;
+	margin-bottom: 1em;
+}
+#start-button, #reset-button {
+	background: #195199;
+	border: 1px solid #195199;
+	border-radius: 5px;
+	color: #ffffff;
+	box-shadow: -2px -2px 5px #191199 inset;
+	margin-left: 3em;
+}
+#start-button:hover, #reset-button:hover {
+	box-shadow: 5px 5px 5px #191199;
+}
+.prevent {
+	position: absolute;
+	width: 260px;
+	height: 340px;
+	background: #202429;
+	z-index: 10;
+	border-radius: 6px;
+}
+
 /* Memory Game Article Styles -- End*/

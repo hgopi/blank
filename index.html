@@ -33,8 +33,13 @@
 		<h2>A Memory Game Using JavaScript</h2>
 		<p>This memory game is going to activate some areas of your brain responsible for memory acquisition which therefore can help your memory improve. Enjoy it and try to finish with less clicks as you can.</p>
 		<h3>How to Play</h3>
-		<p>Well, even though many of you know this, just few words, on the board are some cards face down. On each move you can turn any 2 cards. If the images are identical, they are removed from the board. The aim is to find all pairs of identical cards with the least number of flips.</p>
+		<p>Well, even though many of you know this, just few words, on the board are some cards face down. On each move you can turn cards one by one. If the images are identical, they are removed from the board. The aim is to find all pairs of identical cards with the least number of flips and also within less time.</p>
+		<div class="startup">
+		<button type="button" id="start-button" onclick="timeUpdateFunc();">Start</button>
+		<button type="button" id="reset-button" onclick="resetFunc();">Reset</button>
+		</div>
 		<div class="card-holder">
+			<div class="prevent"></div>
 			<div class="row-one">
 				<div id="r1c1" class="card"></div>
 				<div id="r1c2" class="card"></div>
@@ -43,7 +48,7 @@
 				<div id="r1c5" class="card"></div>
 				<div id="r1c6" class="card"></div>
 			</div>
-			<div class="row-two">
+			<div class="row-two rows">
 				<div id="r2c1" class="card"></div>
 				<div id="r2c2" class="card"></div>
 				<div id="r2c3" class="card"></div>
@@ -51,7 +56,7 @@
 				<div id="r2c5" class="card"></div>
 				<div id="r2c6" class="card"></div>
 			</div>
-			<div class="row-three">
+			<div class="row-three rows">
 				<div id="r3c1" class="card"></div>
 				<div id="r3c2" class="card"></div>
 				<div id="r3c3" class="card"></div>
@@ -59,7 +64,7 @@
 				<div id="r3c5" class="card"></div>
 				<div id="r3c6" class="card"></div>
 			</div>
-			<div class="row-four">
+			<div class="row-four rows">
 				<div id="r4c1" class="card"></div>
 				<div id="r4c2" class="card"></div>
 				<div id="r4c3" class="card"></div>
@@ -67,7 +72,7 @@
 				<div id="r4c5" class="card"></div>
 				<div id="r4c6" class="card"></div>
 			</div>
-			<div class="row-five">
+			<div class="row-five rows">
 				<div id="r5c1" class="card"></div>
 				<div id="r5c2" class="card"></div>
 				<div id="r5c3" class="card"></div>
@@ -75,7 +80,7 @@
 				<div id="r5c5" class="card"></div>
 				<div id="r5c6" class="card"></div>
 			</div>
-			<div class="row-six">
+			<div class="row-six rows">
 				<div id="r6c1" class="card"></div>
 				<div id="r6c2" class="card"></div>
 				<div id="r6c3" class="card"></div>
@@ -86,8 +91,11 @@
 		</div>
 
 		<div class="score-board">
-			<p class="">Total Clicks: <span id="clickCount">0</span></p>
+			<p>Total Clicks: <span id="clickCount">0</span></p>
+			<p id ="timer"></p>
+			<p id="score"></p>
 		</div>
+
 	</div>
 
 		<div class="article">
