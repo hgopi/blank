@@ -29,15 +29,25 @@
 		<div class="col-md-9">
 		<span><img class="nav-image" alt="navigation image" src="../images/menu-icon.png"/></span>
 		<ul class="nav-menu">
-			<li id="article"><a href="../index.html">Articles</a></li>
-			<li id="explore"><a href="explore.html">Explore More</a></li>
-			<li id="aboutme"><a href="aboutme.html">About Me</a></li>
+			<li id="article"><a href="/index.html">Articles</a></li>
+			<li id="explore"><a href="#home">Challenges</a></li>
+			<li id="aboutme"><a href="/pages/games.html">Scripts &amp; Games</a></li>
 		</ul>
 	</div>
 </div>
 	<div class="clearfix"></div>
-	<div class="explore">
+	<div class="sidebars">
+		<div class="sidebar">
+			<h3>You might also want to see this:</h3>
+				<p><a href="/articles/2015/07/hangman.html">Hangman &#x2014; A Word Game</a></p>
+				<p><a href="/articles/2015/07/memory_game.html">A Memory Game Using JavaScript</a></p>
+				<p><a href="/articles/2015/07/audio_sync.html">Synchronizing the Audio with the Text</a></p>
+				<p><a href="/articles/2015/07/css_border.html">CSS Border Radius</a></p>
+				<p><a href="/articles/2015/07/text_editor.html">The Text Editor You&#x2019;ll Fall in Love With</a></p>
+			</div>
+	</div>
 		<div class="articles">
+		<div class="article">
 			<h2>JavaScript Challenges</h2>
 			<p>Below are some JavaScript challenges that I've done on some online websites.</p>
 				<h3>Finding the First Non-repeating Character in a String</h3>
@@ -67,8 +77,9 @@ console.<span class="code-blue">log</span>(firstNonRepeatChar(<span class="arg2-
 			</div>
 			<p class="heading">Code Explained:</p>
 			<p>Using <kbd>for</kbd> loop go through every word of the string. Check the character if it is presented in the declared object <kbd>charCount</kbd>. If it is <kbd>true</kbd>, then increase the count by <kbd>1</kbd>. Or, initiate the count by <kbd>1</kbd>. Thus we will finally get the char count of all the characters in the given string. But wait, that is not the solution for our problem. So lets check our object again.</p>
-			<p>Create another <kbd>for</kbd> loop, this time it is actually a <kbd>for in</kbd> loop. Then check if the current key value is equal to <kbd>1</kbd> (Remember, we need the <b><i>first</i></b> non-repeating character).  If so, return the key value.
+			<p>Create another <kbd>for</kbd> loop, this time it is actually a <kbd>for in</kbd> loop. Then check if the current key value is equal to <kbd>1</kbd> (Remember, we need the <b><i>first</i></b> non-repeating character).  If so, return the key value.</p>
 		</div>
+	</div>
 	</div>
 </body>
 </html>

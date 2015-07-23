@@ -41,7 +41,7 @@ ul.nav-menu {
 }
 ul.nav-menu li {
 	display: inline-block;
-	width: 100px;
+	min-width: 120px;
 	height: 63px;
 	background-color: #353A3F;
 	padding: 1.5em 0;
@@ -60,6 +60,33 @@ ul.nav-menu li a:hover {
 }
 .clear-fix {
 	clear: both;
+}
+.sidebars {
+	float: right;
+	width: 25%;
+}
+.sidebar {
+	margin-top: 2.5%;
+	position: fixed;
+	border: 1px solid #FFFFFF;
+	border-radius: 7px;
+	color: #FFFFFF;
+	padding: 0.3em
+}
+.sidebar h3 {
+	font-size: 18px;
+	color: #CCFF99;
+}
+.sidebar p a {
+	color: #ffffff;
+}
+.sidebar p a:hover {
+	color: #c05151;
+	text-decoration: none;
+}
+.articles {
+	float: left;
+	width: 75%;
 }
 .articles div.article, .aboutme, .explore {
 	margin: 2em 1.2em;
@@ -165,9 +192,9 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   border: 0px solid #000000;
-  height: 20px;
-  width: 39px;
-  border-radius: 7px;
+  height: 22px;
+  width: 12px;
+  border-radius: 5px;
   background: #65001c;
   cursor: pointer;
 }
@@ -196,9 +223,9 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
   box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   border: 0px solid #000000;
-  height: 20px;
-  width: 39px;
-  border-radius: 7px;
+  height: 22px;
+  width: 12px;
+  border-radius: 5px;
   background: #65001c;
   cursor: pointer;
 }
@@ -342,3 +369,18 @@ div.startup {
 }
 
 /* Memory Game Article Styles -- End*/
+.read-more {
+	width: 60px;
+	height: 15px;
+	border: 1px solid #006699;;
+	padding: 5px 15px 5px 15px;
+	border-radius: 5px;
+	margin: 0.5em;
+	cursor: pointer;
+	text-decoration: none;
+}
+.read-more:hover {
+	background-color: #006699;
+	color: #353A3F;
+	text-decoration: none;
+}

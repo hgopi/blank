@@ -1,7 +1,7 @@
-.explore .articles div.js-coding {
-	width: 800px;
+.articles .article div.js-coding {
+	width: 60%;
 	min-height: 150px;
-	margin-left: 12em;
+	margin-left: 20%;
 	margin-bottom: 0.5em;
 	border: 1px solid #FFFFFF;
 	background: #272822;
@@ -15,7 +15,7 @@ pre {
 	border: transparent;
 	color: #F8F8F2;
 }
-.explore .articles p.heading {
+.articles .article p.heading {
 	font-size: 1.1em;
 	font-weight: 800;
 	color: #CCFFCC;

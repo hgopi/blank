@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Few Drops from Ocean</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/images/favicon.png" type="image/png"/>
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/explore.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/tutorial.css" rel="stylesheet" type="text/css" media="all" />
+<script src="/js/jquery.min.js"></script>
+<script src="/js/nav.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64802518-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</head>
+<body>
+<div class="header-fix">
+	<h1 id="home"><span class="header">Just</span><br/>Some Drops</h1>
+	<div class="cotainer">
+		<div class="col-md-9">
+		<span><img class="nav-image" alt="navigation image" src="/images/menu-icon.png"/></span>
+		<ul class="nav-menu">
+			<li id="article"><a href="/index.html">Articles</a></li>
+			<li id="explore"><a href="/pages/challenges.html">Challenges</a></li>
+			<li id="aboutme"><a href="/pages/games.html">Scripts &amp; Games</a></li>
+		</ul>
+	</div>
+</div>
+	<div class="clearfix"></div>
+	<div class="sidebars">
+		<div class="sidebar">
+			<h3>You might also want to see this:</h3>
+				<p><a href="/articles/2015/07/hangman.html">Hangman &#x2014; A Word Game</a></p>
+				<p><a href="/articles/2015/07/memory_game.html">A Memory Game Using JavaScript</a></p>
+				<p><a href="/articles/2015/07/css_border.html">CSS Border Radius</a></p>
+				<p><a href="/articles/2015/07/text_editor.html">The Text Editor You&#x2019;ll Fall in Love With</a></p>
+			</div>
+	</div>
+	<div class="articles">
+		<div class="article">
+			<h2>Synchronizing the Audio with the Text</h2>
+			<p>In this article, we are going to look how to synchronize the audio with the text. Our goal is, while the audio is playing, the said text in the audio should be highlighted in the paragraph.</p>
+			<p>For this demo, I have chosen a small audio of a quote from Henry Ford about success.</p>
+			<p><button id="play" class="myButton">Play</button></p>
+			<audio id="a1" src="/audio/success_audio.mp3" type="audio/mpeg">HTML5 audio not supported</audio>
+			<blockquote>
+				<p><span id="w0">Coming</span> <span id="w1">together</span> <span id="w2">is</span> <span id="w3">a</span> <span id="w4">beginning</span>; <span id="w5">keeping</span> <span id="w6">together</span> <span id="w7">is</span> <span id="w8">progress</span>; <span id="w9">working</span> <span id="w10">together</span> <span id="w11">is</span> <span id="w12">success</span>.</p>
+				<p class="credit">&#x2014;<span id="w13">Henry</span> <span id="w14">Ford</span></p>
+			</blockquote>
+			<p>And our basic HTML markup is just as simple as that audio.</p>
+			<div class="html-markup">
+			<pre>
+&lt;<span class="op-color">p</span>&gt;&lt;<span class="op-color">button</span> <span class="func-color">id</span>=<span class="arg2-color">"play"</span> <span class="func-color">class</span>=<span class="arg2-color">"myButton"</span>&gt;Read to Me&lt;/<span class="op-color">button</span>&gt;&lt;/<span class="op-color">p</span>&gt;
+&lt;<span class="op-color">audio</span> <span class="func-color">id</span>=<span class="arg2-color">"a1"</span> <span class="func-color">src</span>=<span class="arg2-color">"../audio/a01.mp3"</span> <span class="func-color">type</span>=<span class="arg2-color">"audio/mpeg"</span>&gt;HTML5 audio not supported&lt;/<span class="op-color">audio</span>&gt;
+&lt;<span class="op-color">blockquote</span>&gt;
+ 	&lt;<span class="op-color">p</span>&gt;Coming together is a beginning; keeping together is progress; working together is success.&lt;/<span class="op-color">p</span>&gt;
+	&lt;<span class="op-color">p</span> <span class="func-color">class</span>=<span class="arg2-color">"credit"</span>>&#x2014; Henry Ford&lt;/<span class="op-color">p</span>&gt;
+&lt;/<span class="op-color">blockquote</span>&gt;
+</pre>
+			</div>
+			<p>To toggle the highlight, we might need to create highlight class.</p>
+			<div class="css-markup">
+			<pre>
+<span class="func-color">.highlight</span> {
+	<span class="code-blue"><i>background</i></span>: <span class="css-color">#C05151</span>;
+}
+
+<span class="func-color">.myButton</span> {
+	<span class="code-blue"><i>background</i></span>: <span class="css-color">#000000</span>;
+	<span class="code-blue"><i>border-radius</i></span>: <span class="css-color">10</span><span class="op-color">px</span>;
+	<span class="code-blue"><i>width</i></span>: <span class="css-color">50</span><span class="op-color">px</span>;
+	<span class="code-blue"><i>box-shadow</i></span>: <span class="css-color">5</span><span class="op-color">px</span> <span class="css-color">5</span><span class="op-color">px</span> <span class="css-color">5</span><span class="op-color">px</span> <span class="css-color">#000000</span>;
+
+</pre>
+			</div>
+			<p>In order to identify the match timing with the words, we need to wrap the words with a unique id.</p>
+			<div class="html-markup">
+			<pre>
+&lt;<span class="op-color">blockquote</span>&gt;
+  &lt;<span class="op-color">p</span>&gt;&lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w0"</span>&gt;Coming&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w1"</span>&gt;together&lt;/<span class="op-color">span</span>&gt;
+	&lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w2"</span>&gt;is&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w3"</span>&gt;a&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w4"</span>&gt;beginning&lt;/<span class="op-color">span</span>&gt;;
+	&lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w5"</span>&gt;keeping&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w6"</span>&gt;together&lt;/<span class="op-color">span</span>&gt; 
+	&lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w7"</span>&gt;is&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w8"</span>&gt;progress&lt;/<span class="op-color">span</span>&gt;;
+	&lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w9"</span>&gt;working&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w10"</span>&gt;together&lt;/<span class="op-color">span</span>&gt; 
+	&lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w11"</span>&gt;is&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w12"</span>&gt;success&lt;/<span class="op-color">span</span>&gt;.&lt;/p&gt;
+  &lt;<span class="op-color">p</span> <span class="func-color">class</span>=<span class="arg2-color">"credit"</span>&gt;&#x2014; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w13"</span>&gt;Henry&lt;/<span class="op-color">span</span>&gt; &lt;<span class="op-color">span</span> <span class="func-color">id</span>=<span class="arg2-color">"w14"</span>&gt;Ford&lt;/<span class="op-color">span</span>&gt;&lt;/<span class="op-color">span</span> <span class="op-color">p</span>&gt;
+&lt;/<span class="op-color">blockquote</span>&gt;
+			</pre>
+			</div>
+			<p>Now comes the important part of the article, I used a tool called Audacity to get the audio timings. And arranged them in an array</p>
+			<div class="html-markup">
+<pre>
+<span class="code-blue"><i>var</i></span> timeData = [
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"0.000"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"0.490"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"Coming"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"0.491"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"0.918"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"together"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"0.919"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"1.099"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"is"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"1.100"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"1.110"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"a"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"1.111"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"1.580"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"beginning"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"2.225"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"2.595"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"keeping"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"2.595"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"3.099"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"together"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"3.110"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"3.280"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"is"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"3.290"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"3.997"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"progress"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"4.127"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"4.427"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"working"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"4.523"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"4.933"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"together"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"4.943"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"5.073"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"is"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"5.074"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"5.873"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"success"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"6.944"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"7.390"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"Henry"</span>},
+	{<span class="arg2-color">"start"</span>: <span class="arg2-color">"7.543"</span>, <span class="arg2-color">"end"</span>: <span class="arg2-color">"7.909"</span>, <span class="arg2-color">"text"</span>: <span class="arg2-color">"Ford"</span>},
+];
+</pre>
+			</div>
+			<p>The rest is easy. We just need to make a eventListener to the play button and another eventListener for timeupdate which calls a function to highlight the word within the span tag, when the play timing is within the range of the word.</p>
+			<div class="html-markup">
+			<pre>
+<span class="code-blue"><i>var</i></span> audio <span class="op-color">=</span> <span class="code-blue"><i>document</i>.getElementById</span>(<span class="arg2-color">'a1'</span>);
+<span class="code-blue"><i>var</i></span> play <span class="op-color">=</span> <span class="code-blue"><i>document</i>.getElementById</span>(<span class="arg2-color">'play'</span>);
+play.addEventListener(<span class="arg2-color">'click'</span>, <span class="code-blue"><i>function</i></span>(){
+	audio.play();
+});
+audio.addEventListener(<span class="arg2-color">'timeupdate'</span>, <span class="code-blue"><i>function</i></span>(){
+	timeData.forEach(<span class="code-blue"><i>function</i></span>(element, index, array) {
+		<span class="op-color">if</span>(audio.currentTime <span class="op-color">&gt;=</span> element.<span class="code-blue"><i>start</i></span> <span class="op-color">&amp;&amp;</span> audio.currentTime <span class="op-color">&lt;=</span> element.end) {
+    	 	<span class="code-blue"><i>var</i></span> highlightId <span class="op-color">=</span> <span class="arg2-color">'w'</span> <span class="op-color">+</span> index;
+    		<span class="code-blue"><i>document</i>.getElementById</span>(highlightId).<span class="code-blue">className</span> <span class="op-color">=</span> <span class="arg2-color">'highlight'</span>;
+    		<span class="code-blue"><i>var</i></span> removeHightlight <span class="op-color">=</span> <span class="arg2-color">'w'</span> <span class="op-color">+</span> (index <span class="op-color">-</span> <span class="num-color">1</span>);
+    		<span class="code-blue"><i>document</i>.getElementById</span>(removeHightlight).<span class="code-blue">className</span> <span class="op-color">=</span> <span class="arg2-color">''</span>;
+    		}
+	});
+});
+			</pre>
+			</div>
+			
+		</div>
+</div>
+</div>
+<a href="#" class="back-to-top" style="display: inline;">
+	<i class="fa fa-arrow-circle-up"></i>
+</a>
+</body>
+<script type="text/javascript" src="/js/audio-sync.js"></script>
+</html>

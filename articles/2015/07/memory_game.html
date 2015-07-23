@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Few Drops from Ocean</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="/images/favicon.png" type="image/png"/>
+<link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/explore.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/css/tutorial.css" rel="stylesheet" type="text/css" media="all" />
+<script src="/js/jquery.min.js"></script>
+<script src="/js/nav.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-64802518-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</head>
+<body>
+<div class="header-fix">
+	<h1 id="home"><span class="header">Just</span><br/>Some Drops</h1>
+	<div class="cotainer">
+		<div class="col-md-9">
+		<span><img class="nav-image" alt="navigation image" src="/images/menu-icon.png"/></span>
+		<ul class="nav-menu">
+			<li id="article"><a href="/index.html">Articles</a></li>
+			<li id="explore"><a href="/pages/challenges.html">Challenges</a></li>
+			<li id="aboutme"><a href="/pages/games.html">Scripts &amp; Games</a></li>
+		</ul>
+	</div>
+</div>
+	<div class="clearfix"></div>
+	<div class="sidebars">
+		<div class="sidebar">
+			<h3>You might also want to see this:</h3>
+				<p><a href="/articles/2015/07/hangman.html">Hangman &#x2014; A Word Game</a></p>
+				<p><a href="/articles/2015/07/audio_sync.html">Synchronizing the Audio with the Text</a></p>
+				<p><a href="/articles/2015/07/css_border.html">CSS Border Radius</a></p>
+				<p><a href="/articles/2015/07/text_editor.html">The Text Editor You&#x2019;ll Fall in Love With</a></p>
+			</div>
+	</div>
+	<div class="articles">
+<div class="article">
+		<h2>A Memory Game Using JavaScript</h2>
+		<p>This memory game is going to activate some areas of your brain responsible for memory acquisition which therefore can help your memory improve. Enjoy it and try to finish with less clicks as you can.</p>
+		<h3>How to Play</h3>
+		<p>Well, even though many of you know this, just few words, on the board are some cards face down. On each move you can turn cards one by one. If the images are identical, they are removed from the board. The aim is to find all pairs of identical cards with the least number of flips and also within less time.</p>
+		<div class="startup">
+		<button type="button" id="start-button" onclick="timeUpdateFunc();">Start</button>
+		<button type="button" id="reset-button" onclick="resetFunc();">Reset</button>
+		</div>
+		<div class="card-holder">
+			<div class="prevent"></div>
+			<div class="row-one">
+				<div id="r1c1" class="card"></div>
+				<div id="r1c2" class="card"></div>
+				<div id="r1c3" class="card"></div>
+				<div id="r1c4" class="card"></div>
+				<div id="r1c5" class="card"></div>
+				<div id="r1c6" class="card"></div>
+			</div>
+			<div class="row-two rows">
+				<div id="r2c1" class="card"></div>
+				<div id="r2c2" class="card"></div>
+				<div id="r2c3" class="card"></div>
+				<div id="r2c4" class="card"></div>
+				<div id="r2c5" class="card"></div>
+				<div id="r2c6" class="card"></div>
+			</div>
+			<div class="row-three rows">
+				<div id="r3c1" class="card"></div>
+				<div id="r3c2" class="card"></div>
+				<div id="r3c3" class="card"></div>
+				<div id="r3c4" class="card"></div>
+				<div id="r3c5" class="card"></div>
+				<div id="r3c6" class="card"></div>
+			</div>
+			<div class="row-four rows">
+				<div id="r4c1" class="card"></div>
+				<div id="r4c2" class="card"></div>
+				<div id="r4c3" class="card"></div>
+				<div id="r4c4" class="card"></div>
+				<div id="r4c5" class="card"></div>
+				<div id="r4c6" class="card"></div>
+			</div>
+			<div class="row-five rows">
+				<div id="r5c1" class="card"></div>
+				<div id="r5c2" class="card"></div>
+				<div id="r5c3" class="card"></div>
+				<div id="r5c4" class="card"></div>
+				<div id="r5c5" class="card"></div>
+				<div id="r5c6" class="card"></div>
+			</div>
+			<div class="row-six rows">
+				<div id="r6c1" class="card"></div>
+				<div id="r6c2" class="card"></div>
+				<div id="r6c3" class="card"></div>
+				<div id="r6c4" class="card"></div>
+				<div id="r6c5" class="card"></div>
+				<div id="r6c6" class="card"></div>
+			</div>
+		</div>
+
+		<div class="score-board">
+			<p>Total Clicks: <span id="clickCount">0</span></p>
+			<p id ="timer"></p>
+			<p id="score"></p>
+		</div>
+
+	</div>
+</div>
+</div>
+<a href="#" class="back-to-top" style="display: inline;">
+	<i class="fa fa-arrow-circle-up"></i>
+</a>
+</body>
+<script type="text/javascript" src="/js/memory_game.js"></script>
+</html>
