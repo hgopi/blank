@@ -8,14 +8,14 @@ $(document).ready(function(){
 			var remove1 = idArray.indexOf(id1)
 			idArray.splice(remove1, 1);
 			var img1 = new Image();
-			img1.src = 'images/' + arrayOfImages[i];
+			img1.src = '/home/images/' + arrayOfImages[i];
 			var assign1 = document.getElementById(id1);
 			assign1.appendChild(img1);
 			var id2 = idArray[Math.floor(Math.random() * idArray.length)];
 			var remove2 = idArray.indexOf(id2)
 			idArray.splice(remove2, 1);
 			var img2 = new Image();
-			img2.src = 'images/' + arrayOfImages[i];
+			img2.src = '/home/images/' + arrayOfImages[i];
 			var assign2 = document.getElementById(id2);
 			assign2.appendChild(img2);
 		}
