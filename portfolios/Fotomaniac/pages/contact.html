@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FotoManiac</title>
+<meta name="description" content="Fotomaniac - Photographic website">
+<meta name="keywords" content="photography,event photography,nature photography,fashion photography,images gallery">
+<meta name="author" content="Gopikrishnan">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="../style/main.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="../js/script.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(13.0827,80.2707),
+    zoom:12,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+	<div class="header">
+		<div class="heading">
+			<h1 class="title"><a href="#">Foto<span>Maniac</span></a></h1>
+		</div>
+		<div class="navigation-list">
+			<nav>
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+					<li><a href="aboutus.html">About Us</a></li>
+					<li class="active"><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<form id="query">
+			<div id="input" style="overflow:hidden">
+				<input type="text" id="search" name="search" placeholder="Search here"/>
+			</div>
+			<button id="form-control" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+		</form>
+	</div>
+	<div id="contact">
+		<h2>Our Location</h2>
+		<div id="googleMap"></div>
+		<div id="mail">
+			<h3>Mail Us:</h3>
+			<p><span class="glyphicon glyphicon-camera"></span> FotoManiac</p>
+			<p>Flat No 22, Spring Avenue,</p>
+			<p>Ashok Nagar, Chennai - 600024</p>
+			<p>India</p>
+			<p><span class="glyphicon glyphicon-envelope"></span>: fotomaniac@gmail.com</p>
+			<p><span class="glyphicon glyphicon-phone"></span>: +91 - 90001 10009</p>
+		</div>
+		</div>
+		<div id="form-control">
+		<h2>Submit Your Query Here</h2>
+		<form role="form">
+    		<div class="form-group">
+	          <label for="email">Name:</label>
+	          <input type="name" class="form-control" id="name" placeholder="Enter name" required>
+            </div>
+    		<div class="form-group">
+      		  <label for="email">Email:</label>
+              <input type="text" class="form-control" id="email" placeholder="Enter e-mail" required>
+    		</div>
+    		<div class="form-group">
+      		  <label for="loc">Your Location:</label>
+              <input type="text" class="form-control" id="loc" placeholder="Enter your location" required>
+    		</div>
+    		<div class="form-group">
+      		  <label for="txt">Your Query:</label>
+              <textarea class="form-control" placeholder="Enter your questions here..." rows="5" id="txt"></textarea>
+    		</div>
+    		<div class="checkbox">
+      		   <label><input type="checkbox"> Receive our Newsletter</label>
+    		</div>
+    		<button type="submit" class="btn btn-primary">Submit</button>
+  		</form>
+  		</div>
+	</div>
+</body>
+</html>

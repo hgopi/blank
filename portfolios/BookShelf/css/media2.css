@@ -1,0 +1,133 @@
+@media (max-width: 320px) {
+	body {
+		width: 340px;
+		margin: auto;
+	}
+	form#query {
+		width: 290px;
+		float: right;
+		margin-top: 0.5em;
+	}
+	section#navigation {
+		width: 300px;
+		height: 125px;
+		background: #291400;
+		border-radius: 5px;
+		margin-top: 3.5em;
+	}
+	nav ul {
+		list-style: none;
+		width: 100%;
+		float: left;
+		margin-left: -0.5em;
+	}
+	nav ul li {
+		display: inline-block;
+		width: 120px;
+		padding-top: 0.5em;
+		text-align: left;
+	}
+	nav ul li a {
+		color: #F0EBE6;
+	}
+	nav ul li a:hover {
+		font-weight: 600;
+		text-decoration: none;
+		color: #F0EBE6;
+	}
+	section#categories {
+		position: absolute;
+		float: left;
+		margin-top: -11.5em;
+	}
+	section#main {
+		margin-top: 1em;
+		width: 300px;
+		height: 250px;
+	}
+	div#slideshowWrapper {
+		width: 300px;
+		height: 165px;
+		display: inline-block;
+	}
+	section#main div#book-shelf {
+		margin: 2em 0 2em 1em;
+		background: #ffffff;
+		width: 300px;
+	}
+	section#main div#book-shelf div.row {
+		width: 300px;
+		height: 450px;
+		margin-top: 0.1em;
+	}
+	section#main div#book-shelf div.row2, section#main div#book-shelf div.row3 {
+		margin-top: 0.1em;
+	}
+	div.row div.col {
+		float: left;
+		display: inline-block;
+	}
+	div.rowalign {
+		clear: both;
+		float: left;
+		position: absolute;
+		margin-top: 112em;
+		width: 300px;
+		height: 475px;
+	}
+	div.rowalign div.right-align {
+		margin-top: 0.2em;
+	}
+	div#cover1, div#cover2, div#cover3, div#cover4 {
+		display: none;
+	}
+	div.rowalign div.col div.description {
+		text-align: center;
+		margin-left: -2em;
+		float: left;
+		width: 50%;
+		margin-top: 1.5em;
+	}
+	div.rowalign div.col div.description:nth-child(2), div.rowalign div.col div.description:nth-child(3) {
+		margin-top: 5.5em;
+	}
+	div.rowalign div.col div.description p, div.description h3 {
+		text-align: center;
+	}
+	footer {
+		clear: both;
+		width: 300px;
+		background: #544333;
+		color: #F0EBE6;
+		font-size: 0.8em;
+		border-radius: 5px;
+	}
+	footer div {
+		margin-left: 8%;
+		float: left;
+		padding-right: 6em;
+		border-right: 1px dashed #ffffff;
+	}
+	footer div ul {
+		list-style: none;
+		height: 100px;
+	}
+	footer div ul li a {
+	color: #F0EBE6;
+	text-decoration: none;
+}
+footer div ul li a:visited, footer div ul li a:hover {
+	color: #F0EBE6;
+	text-decoration: none;
+}
+div.socialmedia, div.copy {
+	border-right: none;
+}
+footer div.copy {
+	clear: both;
+	margin-top: 2em;
+	width: 85%;
+	text-align: center;
+}
+
+}

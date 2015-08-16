@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FotoManiac</title>
+<meta name="description" content="Fotomaniac - Photographic website">
+<meta name="keywords" content="photography,event photography,nature photography,fashion photography,images gallery">
+<meta name="author" content="Gopikrishnan">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="style/main.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="heading">
+			<h1 class="title"><a href="#">Foto<span>Maniac</span></a></h1>
+		</div>
+		<div class="navigation-list">
+			<nav>
+				<ul>
+					<li class="active"><a href="#header">Home</a></li>
+					<li><a href="pages/services.html">Services</a></li>
+					<li><a href="pages/gallery.html">Gallery</a></li>
+					<li><a href="pages/aboutus.html">About Us</a></li>
+					<li><a href="pages/contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+		<form id="query">
+			<div id="input" style="overflow:hidden">
+				<input type="text" id="search" name="search" placeholder="Search here"/>
+			</div>
+			<button id="form-control" type="button" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-search"></span></button>
+		</form>
+	</div>
+
+	<div id="main">
+		<div class="row">
+			<div class="column1">
+				<img class="column-photo" src="images/articlephoto1.jpg" title="Cathleen Naundorf's photo" width="350" height="300"/>
+				<p class="caption">This photo is taken by Cathleen Naundorf at San Francisco, Americal.</p>
+			</div>
+			<div class="column2">
+				<p>With a combination of Renaissance style, Polaroid film, large-format cameras and digital scans, Cathleen Naundorf is one of the leading fashion working today</p>
+				<p>Find out more of her work here: <button class="btn btn-success btn-sm">Find More</button></p>
+				<p class="align-right">Click on the image to view the photographer profile <span class="glyphicon glyphicon-forward"></span></p>
+			</div>
+			<div class="column3">
+				<img class="column-photo" src="images/photographer1.jpg" title="Cathleen Naundorf" width="350" height="300" onclick="showDialog('cathleen');"/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="column1">
+				<img class="column-photo" src="images/photographer2.jpg" title="Cathleen Naundorf's photo" width="350" height="300" onclick="showDialog('doody');"/>
+			</div>
+			<div class="column2">
+				<p>With a combination of Renaissance style, Polaroid film, large-format cameras and digital scans, Jean Doody is one of the leading fashion working today</p>
+				<p>Find out more of her work here: <button class="btn btn-success btn-sm">Find More</button></p>
+				<p class="align-left"><span class="glyphicon glyphicon-backward"></span> Click on the image to view the photographer profile</p>
+			</div>
+			<div class="column3">
+				<img class="column-photo" src="images/articlephoto2.jpg" title="Jean Doody" width="350" height="300"/>
+				<p class="caption">This photo is taken by Jean Doody at San Francisco, Americal. This photo won "Photo of the Month" award at Melbourne, Australia at 2014.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="column1">
+				<img class="column-photo" src="images/articlephoto3.jpg" title="Cathleen Naundorf's photo" width="350" height="300"/>
+				<p class="caption">This photo is taken by Milo Pearson at San Francisco, Americal. This photo won "Photo of the Month" award at Melbourne, Australia at 2014.</p>
+			</div>
+			<div class="column2">
+				<p>With a combination of Renaissance style, Polaroid film, large-format cameras and digital scans, Milo Pearson is one of the leading fashion working today</p>
+				<p>Find out more of her work here: <button class="btn btn-success btn-sm">Find More</button></p>
+				<p class="align-right">Click on the image to view the photographer profile <span class="glyphicon glyphicon-forward"></span></p>
+			</div>
+			<div class="column3">
+				<img class="column-photo" src="images/photographer3.jpg" title="Cathleen Naundorf" width="350" height="300" onclick="showDialog('pearson');"/>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="column1">
+				<img class="column-photo" src="images/photographer4.jpg" title="Cathleen Naundorf's photo" width="350" height="300" onclick="showDialog('aguiar');"/>
+			</div>
+			<div class="column2">
+				<p>With a combination of Renaissance style, Polaroid film, large-format cameras and digital scans, Cathleen Naundorf is one of the leading fashion working today</p>
+				<p>Find out more of her work here: <button class="btn btn-success btn-sm">Find More</button></p>
+				<p class="align-left"><span class="glyphicon glyphicon-backward"></span> Click on the image to view the photographer profile</p>
+			</div>
+			<div class="column3">
+				<img class="column-photo" src="images/articlephoto4.jpg" title="Cathleen Naundorf" width="350" height="300"/>
+				<p class="caption">This photo is taken by Cathleen Naundorf at San Francisco, Americal. This photo won "Photo of the Month" award at Melbourne, Australia at 2014.</p>
+			</div>
+		</div>
+
+		
+<!--End of Main-->
+	</div>
+	
+	<div class="overlay">
+		<div id="cathleen" class="dialog-box">
+		<button id="close-diaglog" class="btn btn-danger btn-xs" onclick="closeDialog('cathleen');"><span class="glyphicon glyphicon-remove"></span></button>
+			<table>
+				<tr>
+					<td class="head">Name:</td>
+					<td>Cathleen Naundorf</td>
+				</tr>
+				<tr>
+					<td class="head">Home:</td>
+					<td>Australia</td>
+				</tr>
+				<tr>
+					<td class="head">Years Shooting:</td>
+					<td>Since 2008</td>
+				</tr>
+				<tr>
+					<td class="head">Achievements:</td>
+					<td>Photo of the Month, Young Photographer Award</td>
+				</tr>
+				<tr>
+					<td class="head">Equipments:</td>
+					<td>Canon, Nikon, Profoto</td>
+				</tr>
+			</table>
+			<p class="full-photo"><img src="images/photographer1.jpg" width="300" height="397"/></p>
+		</div>
+
+		<div id="doody" class="dialog-box">
+		<button id="close-diaglog" class="btn btn-danger btn-xs" onclick="closeDialog('doody');"><span class="glyphicon glyphicon-remove"></span></button>
+			<table>
+				<tr>
+					<td class="head">Name:</td>
+					<td>Jean Doody</td>
+				</tr>
+				<tr>
+					<td class="head">Home:</td>
+					<td>United States of America</td>
+				</tr>
+				<tr>
+					<td class="head">Years Shooting:</td>
+					<td>Since 2005</td>
+				</tr>
+				<tr>
+					<td class="head">Achievements:</td>
+					<td>Photo of the Month, Young Photographer Award</td>
+				</tr>
+				<tr>
+					<td class="head">Equipments:</td>
+					<td>Canon, Nikon, Profoto</td>
+				</tr>
+			</table>
+			<p class="full-photo"><img src="images/photographer2.jpg" width="300" height="397"/></p>
+		</div>
+
+		<div id="pearson" class="dialog-box">
+		<button id="close-diaglog" class="btn btn-danger btn-xs" onclick="closeDialog('pearson');"><span class="glyphicon glyphicon-remove"></span></button>
+			<table>
+				<tr>
+					<td class="head">Name:</td>
+					<td>Milo Pearson</td>
+				</tr>
+				<tr>
+					<td class="head">Home:</td>
+					<td>United States of America</td>
+				</tr>
+				<tr>
+					<td class="head">Years Shooting:</td>
+					<td>Since 2005</td>
+				</tr>
+				<tr>
+					<td class="head">Achievements:</td>
+					<td>Photo of the Month, Young Photographer Award</td>
+				</tr>
+				<tr>
+					<td class="head">Equipments:</td>
+					<td>Canon, Nikon, Profoto</td>
+				</tr>
+			</table>
+			<p class="full-photo"><img src="images/photographer3.jpg" width="300" height="397"/></p>
+		</div>
+
+		<div id="aguiar" class="dialog-box">
+		<button id="close-diaglog" class="btn btn-danger btn-xs" onclick="closeDialog('aguiar');"><span class="glyphicon glyphicon-remove"></span></button>
+			<table>
+				<tr>
+					<td class="head">Name:</td>
+					<td>Steven Aguiar</td>
+				</tr>
+				<tr>
+					<td class="head">Home:</td>
+					<td>United States of America</td>
+				</tr>
+				<tr>
+					<td class="head">Years Shooting:</td>
+					<td>Since 2005</td>
+				</tr>
+				<tr>
+					<td class="head">Achievements:</td>
+					<td>Photo of the Month, Young Photographer Award</td>
+				</tr>
+				<tr>
+					<td class="head">Equipments:</td>
+					<td>Canon, Nikon, Profoto</td>
+				</tr>
+			</table>
+			<p class="full-photo"><img src="images/photographer4.jpg" width="300" height="397"/></p>
+		</div>
+
+	</div>
+</body>
+</html>

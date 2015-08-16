@@ -384,3 +384,21 @@ div.startup {
 	color: #353A3F;
 	text-decoration: none;
 }
+div#portfolio {
+	color: #ffffff;
+	width: 90%;
+	margin: 1em auto;
+}
+div#portfolio h2 {
+	color: #C05151;
+	font-size: 36px;
+}
+div#portfolio p {
+	margin-left: 0.4em;
+}
+div#portfolio a.read-more {
+	color: #C05151;	
+}
+div#portfolio a.read-more:hover {
+	color: #ffffff;
+}

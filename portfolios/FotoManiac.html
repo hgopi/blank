@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FotoManiac</title>
+</head>
+<body>
+	<iframe id="frame" width="1300" height="900" src="Fotomaniac/index.html"/>
+</body>
+<script>
+window.onload = function () {
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var frame = window.getElementById('frame');
+	frame.style.width = w;
+	frame.style.height = h;
+};
+</script>
+</html>

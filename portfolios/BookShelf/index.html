@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BookShelf</title>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="js/cover3d/Cover3D.js"></script>
+<link rel="stylesheet" href="js/cover3d/Cover3D.css"/>
+<link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" media="(max-width: 740px)" href="css/media.css"/>
+<link rel="stylesheet" media="(max-width: 720px) and (min-width: 320px)" href="css/media2.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>Book<span>Shelf</span></h1>
+
+		<form id="query">
+			<input type="text" id="search" name="search" placeholder="Search here"/>
+			<button type="button" class="btn btn-primary btn-sm">Search</button>
+		</form>
+
+<section id="navigation">
+	<nav>
+	<div>
+		<ul>
+			<li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-plane"></span> New Arrivals</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-heart"></span> Best Deals</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-book"></span> Top Sellers</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> FAQ</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign/Log In</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact Us</a></li>
+			<li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart (<span id="cart-count">0</span>)</a></li>
+		</ul>
+	</div>
+	</nav>
+</section>
+<section id="categories">
+	<div id="categories-list">
+	<h2>Categories</h2>
+	<span class="glyphicon glyphicon-th-large nav-icon" onclick="showmenu()"></span>
+	<script>
+		function showmenu() {
+			if($('#categories-list ul').hasClass('visible')) {
+				$('#categories-list ul').removeClass('visible')
+			} else $('#categories-list ul').addClass('visible');
+		}
+	</script>
+		<ul>
+			<li><a href="#">Arts</a></li>
+			<li><a href="#">Biographies</a></li>
+			<li><a href="#">Children&#x2019;s Education</a></li>
+			<li><a href="#">Computer</a></li>
+			<li><a href="#">Cooking</a></li>
+			<li><a href="#">Education</a></li>
+			<li><a href="#">Fashion</a></li>
+			<li><a href="#">Games</a></li>
+			<li><a href="#">Health</a></li>
+			<li><a href="#">History</a></li>
+			<li><a href="#">Literature</a></li>
+			<li><a href="#">Pets &amp; Animals</a></li>
+			<li><a href="#">Philosophy</a></li>
+			<li><a href="#">Photography</a></li>
+			<li><a href="#">Religion</a></li>
+			<li><a href="#">Science</a></li>
+			<li><a href="#">Sci-Fiction Stories</a></li>
+			<li><a href="#">Sports</a></li>
+			<li><a href="#">Technology</a></li>
+			<li><a href="#">Travel &amp; Living</a></li>
+			<li><a href="#">Technology</a></li>
+		</ul>
+	</div>
+</section>
+<section id="main">
+	<div id="slideshowWrapper">
+		<div id="slideshowWindow">
+			<div class="slides"><a href="#"><img width="600" height="250" src="images/children-reading-book.jpg"/></a></div>
+			<div class="slides"><a href="#"><img width="600" height="250" src="images/o_onlinebookfair.jpg"/></a></div>
+			<div class="slides"><a href="#"><img width="600" height="250" src="images/offer_banners.jpg"/></a></div>
+		</div>
+	</div>
+	
+		<div id="book-shelf">
+			<div class="row">
+			<h2>New Releases</h2>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/new-cover1.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/new-cover2.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/new-cover3.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/new-cover4.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/new-cover5.jpg"/></a>
+				</div>
+			</div>
+
+			<div class="row row2">
+			<h2>Pre Orders</h2>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/pre-cover1.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/pre-cover2.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/pre-cover3.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/pre-cover4.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/pre-cover5.jpg"/></a>
+				</div>
+			</div>
+			<div class="row row3">
+			<h2>Trending</h2>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/trend-cover1.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/trend-cover2.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/trend-cover3.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/trend-cover4.jpg"/></a>
+				</div>
+				<div class="column">
+					<a href="#"><img height="110" width="100" src="images/trend-cover5.jpg"/></a>
+				</div>
+			</div>
+		</div>
+		
+		</section>
+<div class="rowalign">
+<h3>Deals of the Day</h3>
+	<div class="right-align"><p>Deal ends in: <span class="glyphicon glyphicon-time"></span> <span id="timer"><span id="hour">23</span>:<span id="min">59</span>:<span id="seconds">59</span></span></p></div>
+	<div class="col-md-2 col">
+         <div id="cover1">
+         	<a href="#"><img src="images/cover2.jpg"/></a>
+         </div>
+         <div class="description">
+         	<h3>WordPress Plugin jDevelopment</h3>
+         	<p>Now on <del>244.00</del> 155.00</p>
+         	<button class="btn btn-primary">Add to Cart</button>
+         </div>
+    </div>
+
+    <div class="col-md-2 col">
+         <div id="cover2">
+         	<a href="#"><img src="images/cover1.jpg"/></a>
+         </div>
+         <div class="description">
+         	<h3>WordPress Plugin Development</h3>
+         	<p>Now on <del>354.00</del> 185.00</p>
+         	<button class="btn btn-primary">Add to Cart</button>
+         </div>
+    </div>
+    <div class="col-md-2 col">
+         <div id="cover3">
+         	<a href="#"><img src="images/cover3.jpg"/></a>
+         </div>
+         <div class="description">
+         	<h3>Jurassic Park by Michael Crichton</h3>
+         	<p>Now on <del>108.00</del> 92.00</p>
+         	<button class="btn btn-primary">Add to Cart</button>
+         </div>
+    </div>
+    <div class="col-md-2 col up">
+         <div id="cover4">
+         	<a href="#"><img src="images/cover4.jpg"/></a>
+         </div>
+         <div class="description">
+         	<h3>Enchantress by James Maxwell</h3>
+         	<p>Now on <del>244.00</del> 155.00</p>
+         	<button class="btn btn-primary">Add to Cart</button>
+         </div>
+    </div>
+   </div>
+    <script type="text/javascript">
+    	$('#cover1').CoverTresD();
+    	$('#cover2').CoverTresD();
+    	$('#cover3').CoverTresD();
+    	$('#cover4').CoverTresD();
+    </script>
+
+<footer>
+	<div class="sitemap">
+	<h4>Site Map</h4>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">New Arrivals</a></li>
+			<li><a href="#">Best Deals</a></li>
+			<li><a href="#">Top Sellers</a></li>
+			<li><a href="#">FAQ</a></li>
+			<li><a href="#">Sign/Log in</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</div>
+	<div class="helplist">
+	<h4>Help List</h4>
+	<ul>
+		<li><a href="#">Payments</a></li>
+		<li><a href="#">Shipping</a></li>
+		<li><a href="#">Cancellation &amp; Refund</a></li>
+		<li><a href="#">Technical Help</a></li>
+		<li><a href="#">Report a Problem</a></li>
+	</ul>
+	</div>
+	<div class="misclist">
+	<h4>Misc</h4>
+	<ul>
+		<li><a href="#">Payments</a></li>
+		<li><a href="#">Shipping</a></li>
+		<li><a href="#">Cancellation &amp; Refund</a></li>
+		<li><a href="#">Technical Help</a></li>
+		<li><a href="#">Report a Problem</a></li>
+	</ul>
+	</div>
+	<div class="socialmedia">
+	<h4>Social Media</h4>
+	<ul>
+		<li><a href="#">Facebook</a></li>
+		<li><a href="#">Twitter</a></li>
+		<li><a href="#">Google Plus</a></li>
+		<li><a href="#">Youtube</a></li>
+	</ul>
+	</div>
+	<div class="copy">
+		<p>&copy; 2015 Gopikrishnan. All rights reserver</p>
+	</div>
+</footer>
+</body>
+<script>
+	$(document).ready(function(){
+		var currentPosition = 0;var slideWidth = 600;var slides = $('.slides');var numberOfSlides = slides.length;var speed = 3000;slides.wrapAll('<div id="slidesHolder"></div>');slides.css({'float':'left'});$('#slidesHolder').css({'width': slideWidth * numberOfSlides});var slideshowInterval = setInterval(changePosition, speed);
+		function changePosition() {if(currentPosition == numberOfSlides - 1) {currentPosition = 0;} else {currentPosition++;}moveSlide();}function moveSlide() {$('#slidesHolder').animate({'marginLeft': slideWidth*(-currentPosition)}, 'slow');}
+
+				$('.column').mouseover(function() {
+					$(this).addClass('scale');
+				}).mouseout(function(){
+					$(this).removeClass('scale');
+				});
+			var hour = $('#hour').text(), min = $('#min').text(), sec = $('#seconds').text();
+			function timerUpdate() {
+				
+				sec -= 1;
+				if(sec == 0) {
+					sec = 59;
+					min -= 1;
+				}
+				if(min == 0){
+					min = 59;
+					hour -= 1;
+				}
+				
+				$('#hour').text(hour);
+				$('#min').text(min);
+				$('#seconds').text(sec);
+			}
+			setInterval(timerUpdate, 1000);
+	});
+	</script>
+	
+</html>
