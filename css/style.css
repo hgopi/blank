@@ -402,3 +402,7 @@ div#portfolio a.read-more {
 div#portfolio a.read-more:hover {
 	color: #ffffff;
 }
+div.folio a.url {
+	color: #ffffff;
+	text-decoration: none;
+}
