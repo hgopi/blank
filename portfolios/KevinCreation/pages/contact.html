@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kevin Creation</title>
+<link rel="stylesheet" href="../styles/main.css">
+<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.5072,0.1275),
+    zoom:10,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+<body>
+   <div id="top">
+	<div id="logo">
+    	<p><span>K</span>C</p>
+    </div>
+    <div id="nav">
+    	<ul>
+        	<li><a href="../index.html">home</a></li>
+            <li><a href="articles.html">articles</a></li>
+            <li><a href="#">about</a></li>
+            <li class="active"><a href="contact.html">contact</a></li>
+        </ul>
+    </div>
+</div>
+
+    <section id="about">
+        <div class="content">
+            <h2>Contact Me</h2>
+                <div id="googleMap" style="width:500px;height:380px;"></div>
+            <div class="address">
+            <h3>Mailing Address</h3>
+                <p>The Old Warehouse,</p>
+                <p>2 Michael Road,</p>
+                <p>London SW6 2AD,</p>
+                <p>United Kingdom</p>
+            </div>
+        </div>
+        <div class="query">
+            <p><span class="head">Send Your Email</span></p>
+            <form role="form">
+                <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" class="form-control" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Emai;">
+                </div>
+                <div class="form-group">
+                <label for="message">Comment:</label>
+                <textarea class="form-control" rows="5" id="message" placeholder="Your message"></textarea>
+                </div>
+                <div class="checkbox">
+                <label><input type="checkbox"> Do you like to receiver our newsletter?</label>
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

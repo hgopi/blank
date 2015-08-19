@@ -1,0 +1,240 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	width: 100%;
+	margin: 0;
+	background-color: #32313B !important;
+	color: #C4CED3;
+	font: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", serif;
+}
+a {
+	text-decoration: none !important;
+	color: inherit !important;
+}
+div#top {
+	position:relative;
+	width: 90%;
+	margin-left: 10%;
+	float: left;
+}
+div#top div#logo {
+	position:relative;
+	float: left;
+	width: 5%;
+	height: 50px;
+	margin-top: -10px;
+}
+div#top div#logo p {
+	font-size: 1.5em;
+	color: #39b1c6;
+	font-weight: 900;
+}
+div#top div#logo p span {
+	color: #ec3f8c;
+}
+div#top div#nav {
+	position:relative;
+	float: left;
+	left: 17%;
+	width: 46%;
+	margin: 0;
+}
+div#top div#nav ul, div#top div#socialmedias ul {
+	list-style:none;
+	width: 100%;
+}
+div#top div#nav ul li, div#top div#socialmedias ul li {
+	display: inline-block;
+	text-align: center;
+}
+
+div#top div#nav ul li {
+	width: 20%;
+}
+div#top div#nav ul li.active a {
+	border-bottom: 1px solid #ec3f8c;
+}
+div#top div#nav ul li a:hover {
+	color: #39b1c6;
+	border-bottom: 1px solid #ec3f8c;
+}
+div#top div#socialmedias ul li {
+	width: 11%;
+}
+div#header {
+	clear:both;
+	display: block;
+	height: 20px;
+	padding-top: 2%;
+	margin-left: 40%;
+}
+div.bg-shade {
+	width: 100%;
+	height: 40px;
+	left: 0;
+	background: #25242c;
+}
+div#header h1 {
+	font-size: 6.5em;
+	margin-top: -30px;
+	margin-left: -22%;
+	color: #39b1c6;
+}
+div#header h1 span {
+	color: #ec3f8c;	
+}
+div#intro {
+	width: 50%;
+	height: 60px;
+	margin: 5em auto;
+	border-top: 1px solid rgba(57, 177, 198, 0.3);
+	border-bottom: 1px solid rgba(57, 177, 198, 0.3);
+}
+div#intro p {
+	text-align: center;
+	font-size: 1.2em;
+}
+div#whatdo {
+	width: 50%;
+	height: 50px;
+	margin: auto;
+	text-align: center;
+}
+div#whatdo p {
+	margin-left: 7%;
+}
+div#whatdo ul {
+	list-style: none;
+}
+div#whatdo ul li {
+	display: inline-block;
+	width: 150px;
+	height: 150px;
+	background-color: #25242c;
+	border-radius: 100%;
+	font-size: 0.9em;
+}
+div#whatdo ul li img {
+	margin-top: 20%;
+}
+div#whatdo ul li:first-child {
+	color: #ec3f8c;
+}
+div#whatdo ul li:nth-child(2) {
+	color: #39b1c6;
+}
+div#whatdo ul li:last-child {
+	color: #1fd26A;
+}
+div#read {
+	position: relative;
+	margin-top: 12%;
+	margin-left: 47%;
+}
+div#read p a {
+	font-size: 1.2em;
+	border-bottom: 2px solid #39b1c6;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+div#read p a:hover {
+	color: #ec3f8c;	
+}
+section#article-container {
+	clear: both;
+	width: 80%;
+	height: 900px;
+	position: absolute;
+	margin: 2em auto;
+}
+div.article {
+	width: 80%;
+	margin: 4em auto;
+	min-height: 200px;
+	border-radius: 10px;
+	margin-left: 20%;
+}
+div.article h2 {
+	color: #ec3f8c;
+	margin-top: -28px;
+	margin-left: 50px;
+}
+span.date {
+	background: #25242c;
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	font-size: 1.1em;
+}
+span.month {
+	font-size: 1.1em;
+	margin-left: -40px;
+	text-align: center;
+	margin-top: 30px;
+	vertical-align: middle;
+}
+span.first-char {
+	float: left;
+	color: #39b1c6;
+	font-size: 75px;
+	line-height: 50px;
+	padding-top: 4px;
+	padding-right: 8px;
+	padding-left: 3px;
+	font-family: Georgia;
+}
+section#about {
+	clear: both;
+	width: 80%;
+	height: 400px;
+	position: absolute;
+	margin: 2em auto;
+}
+div.content, div.query {
+	width: 80%;
+	margin: 4em auto;
+	min-height: 200px;
+	border-radius: 10px;
+	margin-left: 20%;
+}
+section#about h2 {
+	color: #ec3f8c;
+}
+section#about img {
+	float: right;
+	margin-right: 2em;
+}
+div.address {
+	float: right;
+	margin-top: -300px;
+	margin-right: 150px;
+}
+div.address h3 {
+	color: #39b1c6;
+}
+span.head {
+	font-size: 1.2em;
+	color: #ec3f8c;
+}
+div.form-group {
+	display: block;
+}
+div.form-group label {
+	display: block;
+}
+div.form-group input {
+	width: 80%;
+}
+div.form-group textarea {
+	width: 80%;
+}
+button.btn {
+	display: inline-block;
+	margin-top: 0.5em;
+}
