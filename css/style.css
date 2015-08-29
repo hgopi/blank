@@ -63,15 +63,32 @@ ul.nav-menu li a:hover {
 }
 .sidebars {
 	float: right;
-	width: 25%;
+	width: 22%;
+	margin-right: 2%;
+	height: 700px;
 }
-.sidebar {
-	margin-top: 2.5%;
-	position: fixed;
+div.sidebar {
+	margin-top: 13%;
+}
+
+.sidebar, .contact-form {
 	border: 1px solid #FFFFFF;
 	border-radius: 7px;
 	color: #FFFFFF;
-	padding: 0.3em
+	padding: 0.3em;
+}
+div.contact-form {
+	margin-top: 20%;
+}
+div.form-control form {
+	background: inherit !important;
+}
+div.form input, div.form textarea {
+	width: 100%;
+	color: black;
+}
+div.form button {
+	color: #191199;
 }
 .sidebar h3 {
 	font-size: 18px;
